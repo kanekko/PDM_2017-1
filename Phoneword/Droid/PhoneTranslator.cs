@@ -1,15 +1,4 @@
-﻿/*
-using System;
-namespace Phoneword.Droid
-{
-	public class PhoneTranslator
-	{
-		public PhoneTranslator()
-		{
-		}
-	}
-}
-*/
+﻿//namespace Phoneword.Droid
 using System.Text;
 using System;
 
