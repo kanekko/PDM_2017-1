@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Spanish -->
+<resources>
+    <string name="Hello">Hola Mundo, Clickeame!</string>
+    <string name="ApplicationName">App de Rotación</string>
+  <string name="ipsum">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pretium arcu id libero molestie porttitor.
+  </string>
+  <plurals name="clicks">
+
+    <item quantity="one">Has dado tu primer click!.</item>
+    <item quantity="other">Llevas %d clicks!.</item>
+  </plurals>
+</resources>
