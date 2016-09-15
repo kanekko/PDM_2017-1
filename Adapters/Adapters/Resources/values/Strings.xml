@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Hello">View List with ArrayAdapter</string>
+    <string name="ApplicationName">Adapters Demo</string>
+    <string name="listHeader">My ToDo List</string>
+    <string name="listButton">Custom List</string>
+  <string name="addButton">Add Item</string>
+</resources>
