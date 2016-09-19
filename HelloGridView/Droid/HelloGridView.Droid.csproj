@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB7BDE09-9BF9-423C-9981-9E85F0221C4A}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HelloGridView.Droid</RootNamespace>
+    <AssemblyName>HelloGridView.Droid</AssemblyName>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HelloGridView\HelloGridView.csproj">
+      <Project>{63D99481-4226-48F2-98DC-9AFA721C1F73}</Project>
+      <Name>HelloGridView</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ImageAdapter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\Drawable\sample_0.jpg" />
+    <AndroidResource Include="Resources\Drawable\sample_1.jpg" />
+    <AndroidResource Include="Resources\Drawable\sample_2.jpg" />
+    <AndroidResource Include="Resources\Drawable\sample_3.jpg" />
+    <AndroidResource Include="Resources\Drawable\sample_4.jpg" />
+    <AndroidResource Include="Resources\Drawable\sample_5.jpg" />
+    <AndroidResource Include="Resources\Drawable\sample_6.jpg" />
+    <AndroidResource Include="Resources\Drawable\sample_7.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

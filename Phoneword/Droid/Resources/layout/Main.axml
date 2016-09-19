@@ -26,4 +26,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/CallButton" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Name"
+        android:text="Tu Nombre..." />
+    <Button
+        android:text="Te llamas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/NameButton"
+        android:layout_marginRight="0.0dp" />
 </LinearLayout>
