@@ -46,9 +46,11 @@ namespace Adapters
         {
             View view = convertView; // re-use an existing view, if one is available
             if (view == null) // otherwise create a new one
-                view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem2, null);
-            view.FindViewById<TextView>(Android.Resource.Id.Text1).Text = items[position].title;
-            view.FindViewById<TextView>(Android.Resource.Id.Text2).Text = items[position].description;
+                view = context.LayoutInflater.Inflate(Resource.Layout.ItemVIew, null);
+            view.FindViewById<TextView>(Resource.Id.Text1).Text = items[position].title;
+            view.FindViewById<TextView>(Resource.Id.Text2).Text = items[position].description;
+
+            view.FindViewById<ImageView>(Resource.Id.Image).SetImageResource(items[position].image);
             return view;
         }
         

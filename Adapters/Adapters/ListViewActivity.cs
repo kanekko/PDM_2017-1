@@ -29,11 +29,13 @@ namespace Adapters
             listView.ItemClick += ListView_ItemClick;
             Button addButton = FindViewById<Button>(Resource.Id.addButton);
             addButton.Click += AddButton_Click;
+            listView.ChoiceMode = ChoiceMode.Single;
+            listView.SetItemChecked(1, true);
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            items.Add(new CustomListItem("Item"+items.Count+1,"New item added on fly"));
+            items.Add(new CustomListItem("Item "+(items.Count+1),"New item added on fly", Resource.Drawable.Icon));
             adapter.NotifyDataSetChanged();
         }
 
@@ -48,16 +50,16 @@ namespace Adapters
         private List<CustomListItem> createItems()
         {
             List<CustomListItem> items = new List<CustomListItem>();
-            items.Add(new CustomListItem("Item 1", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. "));
-            items.Add(new CustomListItem("Item 2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. "));
-            items.Add(new CustomListItem("Item 3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. "));
-            items.Add(new CustomListItem("Item 4", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. "));
-            items.Add(new CustomListItem("Item 5", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. "));
-            items.Add(new CustomListItem("Item 6", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. "));
-            items.Add(new CustomListItem("Item 7", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. "));
-            items.Add(new CustomListItem("Item 8", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. "));
-            items.Add(new CustomListItem("Item 9", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. "));
-            items.Add(new CustomListItem("Item 10", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. "));
+            items.Add(new CustomListItem("Item 1", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. ",Resource.Drawable.Icon));
+            items.Add(new CustomListItem("Item 2", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. ", Resource.Drawable.Icon));
+            items.Add(new CustomListItem("Item 3", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. ", Resource.Drawable.Icon));
+            items.Add(new CustomListItem("Item 4", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. ", Resource.Drawable.Icon));
+            items.Add(new CustomListItem("Item 5", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. ", Resource.Drawable.Icon));
+            items.Add(new CustomListItem("Item 6", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. ", Resource.Drawable.Icon));
+            items.Add(new CustomListItem("Item 7", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. ", Resource.Drawable.Icon));
+            items.Add(new CustomListItem("Item 8", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. ", Resource.Drawable.Icon));
+            items.Add(new CustomListItem("Item 9", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. ", Resource.Drawable.Icon));
+            items.Add(new CustomListItem("Item 10", "Lorem ipsum dolor sit amet, consectetur adipiscing elit.Nunc laoreet. ", Resource.Drawable.Icon));
             return items;
         }
     }
