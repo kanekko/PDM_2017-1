@@ -7,20 +7,38 @@ namespace HelloTabbedLayout
 	[Activity(Label = "HelloTabbedLayout", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
-
+		
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 
 			// Set our view from the "main" layout resource
-			SetContentView(Resource.Layout.Main);
+			ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button>(Resource.Id.myButton);
 
-			button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+			// first tab
+			ActionBar.Tab tab = ActionBar.NewTab();
+			tab.SetText(Resources.GetString(Resource.String.tab1_text));
+			tab.SetIcon(Resource.Drawable.tab1_icon);
+			tab.TabSelected += (sender, args) =>
+			{
+				SetContentView(Resource.Layout.Main);
+				// Do something when tab is selected
+			};
+
+			ActionBar.AddTab(tab);
+
+
+			//second tab
+		    tab = ActionBar.NewTab();
+				tab.SetText(Resources.GetString(Resource.String.tab2_text));
+				tab.SetIcon(Resource.Drawable.tab2_icon);
+				tab.TabSelected += (sender, args) =>
+				{
+					// Do something when tab is selected
+				};
+
+			ActionBar.AddTab(tab);
 		}
 	}
 }
