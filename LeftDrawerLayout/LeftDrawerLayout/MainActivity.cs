@@ -12,7 +12,7 @@ using Android.OS;
 using V7Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.V7.App;
 using Android.Support.V4.Widget;
-//using Android.Support.Design.Widget;
+using Android.Support.Design.Widget;
 
 namespace LeftDrawerLayout
 {
@@ -20,7 +20,7 @@ namespace LeftDrawerLayout
     public class MainActivity : AppCompatActivity
     {
         DrawerLayout drawerLayout;
-        //NavigationView navigationView;
+        NavigationView navigationView;
        
         protected override void OnCreate(Bundle bundle)
         {
@@ -37,7 +37,11 @@ namespace LeftDrawerLayout
             SupportActionBar.SetHomeButtonEnabled(true);
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.Icon);
             drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
-            //navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+            navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+
+
+
+
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
