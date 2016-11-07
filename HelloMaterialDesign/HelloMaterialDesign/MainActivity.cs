@@ -4,7 +4,7 @@ using Android.OS;
 
 namespace HelloMaterialDesign
 {
-    [Activity(Label = "HelloMaterialDesign", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Theme = "@android:style/Theme.Material.Light", Label = "HelloMaterialDesign", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
@@ -12,7 +12,7 @@ namespace HelloMaterialDesign
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
-            // SetContentView (Resource.Layout.Main);
+            SetContentView (Resource.Layout.Main);
         }
     }
 }
