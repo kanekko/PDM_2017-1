@@ -4,7 +4,10 @@ using Android.OS;
 
 namespace HelloMaterialDesign
 {
-    [Activity(Theme = "@android:style/Theme.Material.Light", Label = "HelloMaterialDesign", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "HelloMaterialDesign", 
+              MainLauncher = true, 
+              Icon = "@drawable/icon",
+              Theme = "@style/MyCustomTheme")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
