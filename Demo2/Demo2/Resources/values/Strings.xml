@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">Demo2</string>
+    <string name="ApplicationName">Demo2 -Localización</string>
+  <string name="latitude">Latitud:</string>
+  <string name="longitude">Longitud:</string>
+  <string name ="errorMsg">Es necesario activar la ubicación en el dispositivo</string>
 </resources>
